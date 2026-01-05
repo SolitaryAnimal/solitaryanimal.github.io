@@ -2,6 +2,7 @@
 import type { Ref } from 'vue'
 import type { TrizonePos } from './utility/TrizoneContainer.vue'
 import { ref } from 'vue'
+import nixIcon from '@/assets/icons/NixOS_logo.svg'
 import gameImage from '@/assets/imgs/e3fb01e3ca09eb6aff3a600159bd02c3.jpg'
 import GameEhibition from './GameEhibition.vue'
 import Exhibition from './utility/Exhibition.vue'
@@ -61,7 +62,7 @@ const buttonPos: Ref<TrizonePos> = ref('center')
     </template>
     <template #left>
       <div class="side-bar left-bar">
-        <Exhibition :image="gameImage" title="我正在学习" describtion="NixOS" />
+        <Exhibition :image="nixIcon" title="我正在学习" describtion="" />
       </div>
     </template>
     <template #right>
