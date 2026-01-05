@@ -6,6 +6,8 @@ import InteractTitle from './components/InteractTitle.vue'
 function getImages() {
   // return [imageTest];
   const images = import.meta.glob('/src/assets/imgs/*.{png,jpg,jpeg,svg}', {
+    query: { format: 'webp' },
+    import: 'default',
     eager: true,
   })
   return Object.keys(images)
