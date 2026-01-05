@@ -35,17 +35,17 @@ const buttonPos: Ref<TrizonePos> = ref('center')
               gap: 0.75rem;
             "
                   >
-                    <p class="subtitle">
+                    <p class="subtitle programer">
                       喜欢游戏的<button
-                        style="background-color: rgb(16 185 129 / 1)"
+                        style="--button-color: rgb(16 185 129 / 1)"
                         @click="titlePos = 'left'; buttonPos = 'right'"
                       >
                         程序员
                       </button>
                     </p>
-                    <p class="subtitle">
+                    <p class="subtitle player">
                       喜爱写程序的<button
-                        style="background-color: rgb(99 102 241 / 1)"
+                        style="--button-color: rgb(99 102 241 / 1)"
                         @click="titlePos = 'right'; buttonPos = 'left'"
                       >
                         玩家
@@ -125,6 +125,19 @@ const buttonPos: Ref<TrizonePos> = ref('center')
         padding: 0.25rem 0.65rem;
         margin-left: 0.5rem;
         border-radius: 0.25rem;
+        transition: all 1s;
+        background-color: var(--button-color);
+        box-shadow: 0 0 0rem 0rem var(--button-color);
+        border-color: var(--button-color);
+        outline-color: var(--button-color);
+      }
+
+      .subtitle button:hover {
+        box-shadow: 0 0 2rem 0.5rem var(--button-color);
+      }
+
+      .subtitle button:focus {
+        outline: none;
       }
     }
   }
