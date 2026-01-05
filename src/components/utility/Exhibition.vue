@@ -33,20 +33,6 @@ const props = withDefaults(defineProps<{
   justify-content: center;
   align-items: center;
   gap: 1rem;
-
-  padding: 2rem;
-
-  /* 1. 设置半透明背景（白色或黑色，取决于主题） */
-  background: rgba(15, 15, 15, 0.2);
-
-  /* 2. 核心：背景模糊 */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* 兼容 Safari */
-
-  /* 3. 可选：增强质感的边框和阴影 */
-  border: 0.15rem solid rgba(255, 255, 255, 0.081);
-  border-radius: 15px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .component-root-exhibition {

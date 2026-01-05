@@ -62,11 +62,13 @@ const buttonPos: Ref<TrizonePos> = ref('center')
     </template>
     <template #left>
       <div class="side-bar left-bar">
+        <div class="background" />
         <Exhibition :image="nixIcon" title="我正在学习" describtion="" />
       </div>
     </template>
     <template #right>
       <div class="side-bar right-bar">
+        <div class="background" />
         <GameEhibition :image="gameImage" title="我正在玩" describtion="《神界: 原罪2 - 终极版》" store-url="https://store.steampowered.com/app/435150/2" />
       </div>
     </template>
@@ -148,6 +150,25 @@ const buttonPos: Ref<TrizonePos> = ref('center')
     height: 100%;
     position: relative;
     overflow: hidden;
+
+    .background {
+      width: calc(100% - 3rem);
+      height: calc(100% - 3rem);
+      border-radius: 2rem;
+
+      /* 1. 设置半透明背景（白色或黑色，取决于主题） */
+      background: rgba(75, 75, 78, 0.297);
+
+      /* 2. 核心：背景模糊 */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); /* 兼容 Safari */
+
+      /* 3. 可选：增强质感的边框和阴影 */
+      border: 0.15rem solid rgba(255, 255, 255, 0.081);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+      box-sizing: border-box;
+    }
 
     > * {
       position: absolute;
