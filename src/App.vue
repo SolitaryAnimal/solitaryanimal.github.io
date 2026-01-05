@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import BackgroundShaderMask from './components/BackgroundShaderMask.vue'
 import CardBackground from './components/CardBackground.vue'
 import InteractTitle from './components/InteractTitle.vue'
 
