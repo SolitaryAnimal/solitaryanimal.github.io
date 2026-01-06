@@ -152,8 +152,8 @@ const buttonPos: Ref<TrizonePos> = ref('center')
     overflow: hidden;
 
     .background {
-      width: calc(100% - 3rem);
-      height: calc(100% - 3rem);
+      width: calc(100% - 10rem);
+      height: calc(100% - 10rem);
       border-radius: 2rem;
 
       /* 1. 设置半透明背景（白色或黑色，取决于主题） */
