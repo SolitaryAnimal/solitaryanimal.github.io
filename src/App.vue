@@ -9,7 +9,7 @@ function getImages() {
     import: 'default',
     eager: true,
   })
-  return Object.keys(images)
+  return Object.values(images) as string[]
 }
 </script>
 
